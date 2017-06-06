@@ -1,0 +1,189 @@
+body {
+	background: linear-gradient(to left top, #000, #333);
+	background-size: contain;
+}
+h1 {
+	text-align: center;
+	color: white;
+	font-family: serif;
+}
+h2 {
+	text-align: center;
+	color: #ddd;
+	font-family: sans-serif;
+}
+textarea {
+	font-size: 15px;
+	font-family: "Fira Code Medium";
+	width: 80%;
+	margin: 0px;
+	padding: 5px;
+	vertical-align: middle;
+}
+
+#image {
+	display: inline-block;
+	width: 50%;
+	height: 600px;
+	position: fixed;
+	background: black;
+}
+#comment-area {
+	display: inline-block;
+	width: 50%;
+	height: 500px;
+	overflow-y: auto;
+	position: relative;
+}
+
+#send {
+	height: 50px;
+	width: 15%;
+	background: linear-gradient(to left top, #81f, #408);
+	color: white;
+	border: 0;
+	text-shadow: 0px 2px 2px black;
+	font-size: 20px;
+	font-family: Arial;	
+	vertical-align: middle;
+	margin: 0px;
+	padding: 5px;
+}
+#send:hover {
+	background: #81f;
+}
+
+.comment-box {
+	display: block;
+	background: linear-gradient(to left top, #555, #444);
+	box-shadow: 0px 5px 10px black;
+	width: auto;
+	margin: 10px;
+}
+.avatar {
+	display: inline-table;
+	background: linear-gradient(to top, #224, #438);
+	border-radius: 100%;
+	vertical-align: top;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	padding: 4px;
+}
+
+.avatar img {
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	box-shadow: 0px 3px 3px black;
+}
+
+.comment-content {
+	display: inline-table;
+}
+
+.comment-name {
+	display: block;
+	font-size: 22px;
+	font-family: "Segoe UI";
+	text-shadow: 0px 2px 2px black;
+	color: #d4f;
+	vertical-align: top;
+	margin: 5px;
+	font-weight: bold;
+}
+
+.comment-text {
+	display: block;
+	font-size: 20px;
+	font-family: "Fira Code Medium";
+	color: #fff;
+	vertical-align: top;
+	margin: 10px;
+}
+
+
+/*---------------- For emotion ---------------------*/
+/* ------------------------------------------------ */
+.emo {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-size: cover;
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+@keyframes bigger {
+	0% {width: 30px; height: 30px; margin-top: 0px; }
+	100% {width: 60px; height: 60px; margin-top: -30px; }
+}
+@keyframes smaller {
+	100% {width: 30px; height: 30px; margin-top: 0px; }
+	0% {width: 60px; height: 60px; margin-top: -30px; }
+}
+.emo:hover:not(.emo-pressed) {
+	animation-name: bigger;
+	animation-duration: 0.2s;
+	width: 60px;
+	height: 60px;
+	margin-top: -30px;
+}
+.emo:not(:hover):not(.emo-pressed) {
+	animation-name: smaller;
+	animation-duration: 0.2s;
+	width: 30px;
+	height: 30px;
+	margin-top: 0px;
+}
+.emo-like {
+	background-image: url('emotion/like.gif');
+}
+
+.emo-love {
+	background-image: url('emotion/love.gif');
+}
+
+.emo-wow {
+	background-image: url('emotion/wow.gif');
+}
+
+.emo-haha {
+	background-image: url('emotion/haha.gif');
+}
+.emo-sad {
+	background-image: url('emotion/sad.gif');
+}
+.emo-angry {
+	background-image: url('emotion/angry.gif');
+}
+
+.emo-pressed {
+	border: 1px solid white;
+	width: 60px;
+	height: 60px;
+}
+.emo-area {
+	display: inline-block;
+	opacity: 0;
+}
+
+@keyframes emoFadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes emoFadeOut {
+	100% {opacity: 0;}
+	0% {opacity: 1;}
+}
+
+.emo-area:hover {
+	animation-name: emoFadeIn;
+	animation-duration: 1s;
+	opacity: 1;
+}
+.emo-area:not(:hover) {
+	animation-name: emoFadeOut;
+	animation-duration: 1s;
+	opacity: 0;
+}
