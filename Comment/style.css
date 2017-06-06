@@ -24,7 +24,7 @@ textarea {
 #image {
 	display: inline-block;
 	width: 50%;
-	height: 600px;
+	height: 500px;
 	position: fixed;
 	background: black;
 }
