@@ -5,40 +5,41 @@ body {
 h1 {
 	text-align: center;
 	color: white;
-	font-family: serif;
+	font-family: cursive;
 }
-h2 {
-	text-align: center;
-	color: #ddd;
-	font-family: sans-serif;
+
+#header {
+	display: block;
+	background: #333;
+	margin: 0px;
+	height: 100px;
 }
+
 textarea {
+	display: inline;
 	font-size: 15px;
 	font-family: "Fira Code Medium";
-	width: 80%;
-	margin: 0px;
+	margin: auto;
 	padding: 5px;
 	vertical-align: middle;
 }
 
-#image {
-	display: inline-block;
-	width: 50%;
-	height: 500px;
-	position: fixed;
-	background: black;
-}
 #comment-area {
-	display: inline-block;
-	width: 50%;
+	display: block;
 	height: 500px;
 	overflow-y: auto;
-	position: relative;
+}
+
+#send-place {
+	display: block;
+	height: 50px;
+	margin: 5px 30%;
 }
 
 #send {
+	display: inline;
 	height: 50px;
-	width: 15%;
+	width: 100px;
 	background: linear-gradient(to left top, #81f, #408);
 	color: white;
 	border: 0;
@@ -46,7 +47,7 @@ textarea {
 	font-size: 20px;
 	font-family: Arial;	
 	vertical-align: middle;
-	margin: 0px;
+	margin: 5px;
 	padding: 5px;
 }
 #send:hover {
@@ -58,15 +59,15 @@ textarea {
 	background: linear-gradient(to left top, #555, #444);
 	box-shadow: 0px 5px 10px black;
 	width: auto;
-	margin: 10px;
+	margin: 0px 20% 5px 20%;
 }
 .avatar {
-	display: inline-table;
+	display: inline-block;
 	background: linear-gradient(to top, #224, #438);
 	border-radius: 100%;
 	vertical-align: top;
-	width: 100px;
-	height: 100px;
+	width: 20%;
+	height: auto;
 	margin: 5px;
 	padding: 4px;
 }
@@ -79,7 +80,8 @@ textarea {
 }
 
 .comment-content {
-	display: inline-table;
+	display: inline-block;
+	width: 60%;
 }
 
 .comment-name {
@@ -112,7 +114,6 @@ textarea {
 	background-size: cover;
 	position: relative;
 	margin-left: 5px;
-	margin-right: 5px;
 }
 @keyframes bigger {
 	0% {width: 30px; height: 30px; margin-top: 0px; }
@@ -122,14 +123,14 @@ textarea {
 	100% {width: 30px; height: 30px; margin-top: 0px; }
 	0% {width: 60px; height: 60px; margin-top: -30px; }
 }
-.emo:hover:not(.emo-pressed) {
+.emo:hover {
 	animation-name: bigger;
 	animation-duration: 0.2s;
 	width: 60px;
 	height: 60px;
 	margin-top: -30px;
 }
-.emo:not(:hover):not(.emo-pressed) {
+.emo:not(:hover) {
 	animation-name: smaller;
 	animation-duration: 0.2s;
 	width: 30px;
@@ -159,31 +160,9 @@ textarea {
 }
 
 .emo-pressed {
-	border: 1px solid white;
-	width: 60px;
-	height: 60px;
+	border: 3px solid #80f;
+	border-radius: 30%;
 }
 .emo-area {
 	display: inline-block;
-	opacity: 0;
-}
-
-@keyframes emoFadeIn {
-	0% {opacity: 0;}
-	100% {opacity: 1;}
-}
-@keyframes emoFadeOut {
-	100% {opacity: 0;}
-	0% {opacity: 1;}
-}
-
-.emo-area:hover {
-	animation-name: emoFadeIn;
-	animation-duration: 1s;
-	opacity: 1;
-}
-.emo-area:not(:hover) {
-	animation-name: emoFadeOut;
-	animation-duration: 1s;
-	opacity: 0;
 }

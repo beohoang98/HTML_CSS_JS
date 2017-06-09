@@ -10,18 +10,19 @@
 	</head>
 
 	<body>
-		<h1>CO EM CHO</h1>
-		<h2>MIN ft Mr.A</h2>
+		<div id="header">
+			<h1>THE COMMENT GAME</h1>
+		</div>
 		<audio id="notify">
 			<source src="sound/messenger.mp3" type="audio/mp3">
 		</audio>
+		<audio id="like-sound">
+			<source src="sound/like.mp3" type="audio/mp3">
+		</audio>
 		<div id="comment-area">
 		</div>
-		<div id="image">
-			<iframe scrolling="no" width="100%" height="500px" src="https://mp3.zing.vn/embed/song/ZW7FODC9" frameborder="0" allowfullscreen="true"></iframe>
-		</div>
 
-		<div style='width:50%;height:50px'>
+		<div id="send-place">
 			<textarea placeholder="comment here"></textarea>
 			<input type="button" id="send" value="Send"/>
 		</div>

@@ -39,15 +39,15 @@ function createCmt(count, textValue) {
 }
 
 $('textarea').bind('enterKey', function() {
-	++count;
 	var textValue = document.getElementsByTagName('textarea')[0];
 	if (textValue.value === "" || textValue.value === " ") {
 		alert("Ban chua nhap comment");
 		return;
 	}
+	++count;
 
 	var newCmt = createCmt(count,textValue.value).appendTo('#comment-area')
-												 .toggle(500);
+												 .slideToggle(500);
 	///notify
 	textValue.value = "";
 	$('#notify').get(0).currentTime = 0;
