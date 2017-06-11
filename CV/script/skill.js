@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$('<p/>').text(name).appendTo(d);
 
 		var d1 = $('<div/>').css('width', rate*100/maxRate+"%")
-							.css('background','#22f');
+							.css('background','#115');
 
 		var d2 = $('<div/>').css('width', (maxRate-rate)*100/maxRate+"%")
 							.css('background','#88f');
