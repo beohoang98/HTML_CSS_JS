@@ -1,6 +1,10 @@
 body {
 	background-color: #115;
 	background-image: linear-gradient(to right, #001, #115, #001);
+	background-image: -webkit-linear-gradient(right, #001, #115, #001);
+	background-image: -moz-linear-gradient(right, #001, #115, #001);
+	background-image: -o-linear-gradient(right, #001, #115, #001);
+
 	transition: scroll 0.5s;
 }
 
@@ -15,6 +19,9 @@ body {
 	
 	background-color: #115;
 	background-image: linear-gradient(to right, #001, #115, #001);
+	background-image: -webkit-linear-gradient(right, #001, #115, #001);
+	background-image: -moz-linear-gradient(right, #001, #115, #001);
+	background-image: -o-linear-gradient(right, #001, #115, #001);
 
 	background-size: cover;
 }
@@ -26,7 +33,7 @@ body {
 	color: #ddd;
 	font-family: Open Sans, sans-serif;
 	font-size: 25px;
-	text-shadow: 0px 2px 10px black;
+	text-shadow: 0px 5px 10px black;
 }
 
 #side-bar {
@@ -74,8 +81,7 @@ body {
 	position: relative;
 	background-color: #335;
 	background-image: url('../image/header.jpg');
-	background-size: contain;
-	background-blend-mode: multiply;
+	background-size: cover;
 	background-attachment: fixed;
 	height: 100%;
 	overflow: auto;
@@ -86,6 +92,9 @@ body {
 	height: 100px;
 	background-color: #115;
 	background-image: linear-gradient(to right,#001, #115, #001);
+	background-image: -webkit-linear-gradient(right, #001, #115, #001);
+	background-image: -moz-linear-gradient(right, #001, #115, #001);
+	background-image: -o-linear-gradient(right, #001, #115, #001);
 }
 
 .container {
@@ -98,8 +107,13 @@ body {
 }
 .info h2 {
 	font-size: 25px;
+
 	background-color: #fff;
 	background-image: linear-gradient(to right, #335, #fff, #335);
+	background-image: -webkit-linear-gradient(right, #335, #fff, #335);
+	background-image: -moz-linear-gradient(right, #335, #fff, #335);
+	background-image: -o-linear-gradient(right, #335, #fff, #335);
+
 	padding: 10px;
 	text-align: center;
 	color: #444;
@@ -113,7 +127,7 @@ body {
 	padding: 15px;
 	margin: 10px 15%;
 	background-color: #eee;
-	background-image: linear-gradient(to right, #eee, #fff, #eee);
+	
 	font-family: Source Code Pro, monospace;
 	text-align: left;
 	color: #222;
@@ -196,6 +210,8 @@ body {
 	background-color: white;
 	background-size: cover;
 	background-blend-mode: multiply;
+
+	box-shadow: 0px 5px 10px black;
 	border: 1px solid white;
 	border-radius: 100%;
 	transition: 0.5s;
