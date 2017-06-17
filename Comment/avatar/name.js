@@ -4,18 +4,18 @@
 
 var numOfName = 15;
 
-var ava_name = ['Shankayaki',
-				'Nonononoki',
-				'Hanatachi',
-				'Manadaki Unichi',
-				'Liveraki',
-				'CryingMan',
-				'Alice',
-				'NoName',
+var ava_name = ['Jack Ma',
+				'Steve Jobs',
+				'Justin Bieber',
+				'Fellani',
+				'Son Tung MTP',
+				'Ibrahimovic',
+				'Nicklas Bendtner',
+				'Donald Trump',
 				'Taylor Swift',
 				'Lionel Messi',
 				'Cristiano Ronaldo',
-				'Philipe Coutinho',
+				'Jack Sparrow',
 				'David Beckham',
 				'Bill Gates',
 				'Mark Zuckerberg'];

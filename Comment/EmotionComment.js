@@ -4,15 +4,18 @@ function createEmo(emo_name) {
 					   .addClass("emo-"+emo_name)
 					   .hide();
 
-	emo.on('click', function() 
+	emo.on('click', function()
 	{
 		emo.parent().find('.emo-pressed')
-					.removeClass('emo-pressed');
-					
+					.removeClass('emo-pressed')
+					.html("");
+
 		emo.parent().children()
 					.fadeOut(100);
 
-		emo.addClass('emo-pressed');
+		var nameOfLiker = $('<div/>').addClass("nameLiker").text(ava_name[ava_num-1]);
+		emo.addClass('emo-pressed')
+			 .append(nameOfLiker);
 
 		$('#like-sound')[0].currentTime = 0;
 		$('#like-sound')[0].play();
@@ -45,7 +48,7 @@ function appendEmoArea() {
 		element.children().fadeOut(100);
 		var isPressed = element.find('.emo-pressed');
 
-		if (isPressed.length===0) 
+		if (isPressed.length===0)
 			element.find('.emo-like').fadeIn(100);
 		else isPressed.fadeIn(100);
 	});

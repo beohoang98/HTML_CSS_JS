@@ -1,0 +1,86 @@
+.lowTheme {
+    background: #3b5998;
+    color: #dfe3ee;
+}
+.mediumTheme {
+    background: #8b9dc3;
+    color: #ffffff;
+}
+.highTheme {
+    background: #f7f7f7;
+    color: #000000;
+}
+.textColor {
+    color: #000000;
+}
+.headTextColor {
+    color: #dfe3ee;
+}
+.subTextColor {
+    color: #ffffff;
+}
+
+#slide {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    margin: 0px 27.5%;
+}
+
+.post {
+    display: inline-block;
+    border-radius: 10px;
+    vertical-align: top;
+}
+
+.post-title {
+    font-size: 30px;
+    font-family: serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+.post-tagline {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    font-family: sans-serif;
+    border-radius: 0px 0px 100% 100%;
+}
+.post-info {
+    padding: 0px 15%;
+    font-family: monospace;
+    text-align: left;
+}
+
+.avatar {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    vertical-align: middle;
+    float: left;
+}
+.flag {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+#view {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    border-radius: 0px 0px 100% 100%;
+}
+
+#view a {
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}

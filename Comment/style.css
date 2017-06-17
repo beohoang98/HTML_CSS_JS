@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(to left top, #000, #333);
+	background: #373854;
 	background-size: contain;
 }
 h1 {
@@ -8,62 +8,61 @@ h1 {
 	font-family: cursive;
 }
 
-#header {
-	display: block;
-	background: #333;
-	margin: 0px;
-	height: 100px;
-}
-
 textarea {
-	display: inline;
+	display: inline-block;
 	font-size: 15px;
 	font-family: "Fira Code Medium";
-	margin: auto;
 	padding: 5px;
 	vertical-align: middle;
 }
 
+#imgCmt {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50px;
+	height: auto;
+}
+
 #comment-area {
 	display: block;
-	height: 500px;
+	height: 90vh;
 	overflow-y: auto;
 }
 
 #send-place {
 	display: block;
 	height: 50px;
-	margin: 5px 30%;
+	text-align: center;
 }
 
 #send {
 	display: inline;
 	height: 50px;
 	width: 100px;
-	background: linear-gradient(to left top, #81f, #408);
+	background: #9e379f;
 	color: white;
 	border: 0;
 	text-shadow: 0px 2px 2px black;
 	font-size: 20px;
-	font-family: Arial;	
+	font-family: Arial;
 	vertical-align: middle;
 	margin: 5px;
 	padding: 5px;
 }
 #send:hover {
-	background: #81f;
+	background: #493267;
 }
 
 .comment-box {
 	display: block;
-	background: linear-gradient(to left top, #555, #444);
+	background: #493267;
 	box-shadow: 0px 5px 10px black;
 	width: auto;
-	margin: 0px 20% 5px 20%;
+	margin: 10px 20% 10px 20%;
 }
 .avatar {
 	display: inline-block;
-	background: linear-gradient(to top, #224, #438);
+	background: #9e379f;
 	border-radius: 100%;
 	vertical-align: top;
 	width: 20%;
@@ -89,7 +88,7 @@ textarea {
 	font-size: 22px;
 	font-family: "Segoe UI";
 	text-shadow: 0px 2px 2px black;
-	color: #d4f;
+	color: #7bb3ff;
 	vertical-align: top;
 	margin: 5px;
 	font-weight: bold;
@@ -99,7 +98,7 @@ textarea {
 	display: block;
 	font-size: 20px;
 	font-family: "Fira Code Medium";
-	color: #fff;
+	color: #e86af0;
 	vertical-align: top;
 	margin: 10px;
 }
@@ -111,7 +110,8 @@ textarea {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: contain;
 	position: relative;
 	margin-left: 5px;
 }
@@ -160,9 +160,17 @@ textarea {
 }
 
 .emo-pressed {
-	border: 3px solid #80f;
+	border: 3px solid #9e379f;
 	border-radius: 30%;
 }
 .emo-area {
 	display: inline-block;
+}
+
+.nameLiker {
+	margin-left: 40px;
+	color: #e86af0;
+	font-size: 16px;
+	font-style: normal;
+	font-family: sans-serif;
 }

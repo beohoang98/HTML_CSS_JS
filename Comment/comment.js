@@ -1,24 +1,20 @@
-var imgSize = 150;
-
 $(document).ready(function() {
 
-var count = 0;
 $('textarea').text("");
 
 function createAvatar(count, ava_num) {
 	var avatar = $('<div/>').addClass('avatar')
-							.html('<img src="avatar/img'+ava_num+'.jpg"/>');							
+							.html('<img src="avatar/img'+ava_num+'.jpg"/>');
 
 	return avatar;
 }
 
 function createCmt(count, textValue) {
-	var ava_num = Math.floor(Math.random()*numOfName)+1;
 
 	var commentBox = $('<div/>').attr('class','comment-box')
 								.attr('id','cmt'+count)
 								.hide();
-	
+
 	var avatar = createAvatar(count, ava_num).appendTo(commentBox);
 
 	var commentText = $('<span/>').attr('class','comment-text')
@@ -48,11 +44,12 @@ $('textarea').bind('enterKey', function() {
 
 	var newCmt = createCmt(count,textValue.value).appendTo('#comment-area')
 												 .slideToggle(500);
+
 	///notify
 	textValue.value = "";
 	$('#notify').get(0).currentTime = 0;
 	$('#notify').get(0).play();
-	
+
 	///scroll down
 	var top = $('#comment-area').scrollTop();
 	var len = $('#comment-area')[0].scrollHeight;
@@ -61,6 +58,10 @@ $('textarea').bind('enterKey', function() {
   		$('#comment-area').animate({scrollTop:len}, '100');
 	}
 	$('textarea').focus();
+
+	//create new comment name
+	ava_num = Math.floor(Math.random()*numOfName)+1;
+	$('#imgCmt').attr("src","avatar/img"+ava_num+".jpg");
 });
 
 $('textarea').keyup(function(e) {
@@ -74,5 +75,3 @@ $('#send').click(function() {
 });
 
 });
-
-
