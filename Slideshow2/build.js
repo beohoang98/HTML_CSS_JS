@@ -22,10 +22,10 @@ function createPost(postData) {
     var postTagline = document.createElement('div');
     postTagline.className = "post-tagline mediumTheme subTextColor";
     postTagline.innerHTML = infoBirth + "<br>" + infoNation;
+
     var flags = document.createElement('img');
     flags.className = 'flag';
     flags.src = nationFlags[infoNation];
-    postTagline.appendChild(flags);
 
     //create info place
     var postInfo = document.createElement('div');
@@ -41,6 +41,7 @@ function createPost(postData) {
     var postMain = document.createElement('div');
     postMain.className = "post highTheme";
     postTitle.appendChild(postImg);
+    postTitle.appendChild(flags);
     postMain.appendChild(postTitle);
     postMain.appendChild(postTagline);
     postMain.appendChild(postInfo);

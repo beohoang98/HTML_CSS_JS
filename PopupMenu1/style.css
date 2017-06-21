@@ -1,0 +1,142 @@
+.lowTheme {
+    background: #373854;
+    color: #9e379f;
+    font-family: 'Calibri', sans-serif;
+}
+.mediumTheme {
+    background: #493267;
+    color: #e86af0;
+    font-family: 'Calibri', sans-serif;
+}
+.highTheme {
+    background: #ffffff;
+    color: #000000;
+    font-family: Garamond;
+}
+#header {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    min-height: 100px;
+}
+#container {
+    margin: 100px 15% 0px 15%;
+    min-height: 100vh;
+}
+#footer {
+    display: table;
+    width: 100%;
+    text-align: center;
+    height: 10rem;
+}
+#footer div {
+    display: table-cell;
+    margin: auto;
+    vertical-align: middle;
+}
+
+#siteName {
+    color: #7bb3ff;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: 1s;
+}
+#header:hover > #menu {
+    transform: translateY(0%);
+    opacity: 1;
+}
+#header:hover > #siteName {
+    left: 25%;
+}
+#menu {
+    display: inline-block;
+    position: relative;
+    float: right;
+    max-width: 50%;
+
+    transform: translateY(-100%);
+    opacity: 0;
+
+    transition: 1s;
+}
+.menu_member {
+    display: inline-block;
+    position: relative;
+
+    transition: 1s;
+}
+.menu_member:hover {
+    background: #181927;
+    cursor: pointer;
+}
+
+.menu_member h2 {
+    padding: 10px;
+}
+
+.menu_contain {
+    position: absolute;
+    display: block;
+    min-width: 200px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    margin: 0px;
+    text-align: center;
+    transform: rotateY(180deg);
+
+    transition: 0.5s ease-out;
+}
+.menu_contain div {
+    display: block;
+
+    height: 50px;
+    padding: 5px;
+    border: 1px solid black;
+    border-width: 0px 0px 1px 0px;
+    box-shadow: 0px 2px 2px black;
+
+    transition: background 0.5s;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25em;
+
+    transform: translateX(-50%);
+}
+.menu_contain div:hover {
+    background: #291633;
+}
+
+.menu_member:hover .menu_contain{
+    visibility: visible;
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+img {
+    width: 80%;
+}
+
+.poem {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 10px;
+}
+.poem p {
+    font-family: cursive;
+    font-size: 1em;
+    margin: 20px 0px;
+}
