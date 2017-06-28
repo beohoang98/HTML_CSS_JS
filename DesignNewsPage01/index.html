@@ -3,104 +3,161 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="ico" href="icon.png" type="image/png">
+        <link rel="icon" href="icon.png" type='image/png'>
         <title>Tin tuc Bong Da, cac su kien bong da noi bat</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Pridi" rel="stylesheet">
         <link type='text/css' rel="stylesheet" href="style.css">
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="post/data.js"></script>
+        <script type="text/javascript" src="post/createPostFormData.js"></script>
     </head>
     <body>
         <div class="header">
             <div class="logo">
-                <img src="logo.png" alt="logo">
+                <a href='index.html'>
+                    <img src="logo.png" alt="logo">
+                </a>
             </div>
             <div class="menu">
                 <div class="menu-member">
-                    <a href="">TRANG CHU</a>
+                    <a href="">TRANG CHỦ</a>
                 </div>
                 <div class="menu-member">
-                    <a href="">MOI NHAT</a>
+                    <a href="">MỚI NHẤT</a>
                 </div>
                 <div class="menu-member">
-                    <a href="">BONG DA ANH</a>
+                    <a href="">BÓNG ĐÁ ANH</a>
                     <div class="sub-menu">
                         <div class="sub-menu-member">
-                            <a href="">Ngoai hang Anh</a>
+                            <a href="">NGOẠI HẠNG ANH</a>
                         </div>
                         <div class="sub-menu-member">
-                            <a href="">Cup Lien Doan</a>
+                            <a href="">CÚP LIÊN ĐOÀN</a>
                         </div>
                         <div class="sub-menu-member">
-                            <a href="">Cup FA</a>
+                            <a href="">FA CUP</a>
                         </div>
                         <div class="sub-menu-member">
-                            <a href="">Tin Khac</a>
+                            <a href="">TIN KHÁC</a>
                         </div>
                     </div>
                 </div>
                 <div class="menu-member">
-                    <a href="">BONG DA TBN</a>
+                    <a href="">BÓNG ĐÁ TBN</a>
                     <div class="sub-menu">
                         <div class="sub-menu-member">
-                            <a href="">La Liga</a>
+                            <a href="">LA LIGA</a>
                         </div>
                         <div class="sub-menu-member">
-                            <a href="">Cup Nha Vua</a>
+                            <a href="">CÚP NHÀ VUA</a>
                         </div>
                         <div class="sub-menu-member">
-                            <a href="">Tin Khac</a>
+                            <a href="">TIN KHÁC</a>
                         </div>
                     </div>
                 </div>
                 <div class="menu-member">
-                    <a href="">BONG DA VIET NAM</a>
+                    <a href="">BÓNG ĐÁ VIỆT NAM</a>
                     <div class="sub-menu">
                         <div class="sub-menu-member">
-                            <a href="">V-League</a>
+                            <a href="">V-LEAGUE</a>
                         </div>
                         <div class="sub-menu-member">
-                            <a href="">Cup Quoc Gia</a>
+                            <a href="">CÚP QUỐC GIA</a>
                         </div>
                         <div class="sub-menu-member">
-                            <a href="">Tin Khac</a>
+                            <a href="">TIN KHÁC</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="search">
-                <form action="">
+                <img src="find.png" alt="find"/>
+                <form action="index.html">
                     <input type="search" placeholder="fill your keyword" id='search-text'/>
-                    <input type='submit' value='' id='search-button'/>
+                    <input type='submit' value='Tim kiem' id='search-button'/>
                 </form>
             </div>
         </div>
         <div class="container">
-            <div class="trend-news">
-                <div class="slide-news">
-
+            <div class="break-line"></div>
+            <div class="news-frame trend-news">
+                <div id='first-trend' class="slide-news">
+                    <div class="slideshow-contain">
+                        <div class="slideshow">
+                        </div>
+                    </div>
+                    <div class="cursor">
+                        <div class="prev" onclick="changeSlide('#first-trend','-')">&#10094</div>
+                        <div class="next" onclick="changeSlide('#first-trend','+')">&#10095</div>
+                    </div>
                 </div>
+                <div class="news-frame hot-news">
+                    <h2>TIN NÓNG</h2>
+                    <div class="list-news">
+
+                    </div>
+                </div>
+            </div>
+            <div class="news">
+                <div tag='bongdaAnh' class="news-frame">
+                    <h2>BÓNG ĐÁ ANH</h2>
+                    <div class="first-post"></div>
+                    <div class="list-news"></div>
+                </div>
+                <div tag='bongdaTBN' class="news-frame">
+                    <h2>BÓNG ĐÁ TÂY BAN NHA</h2>
+                    <div class="first-post"></div>
+                    <div class="list-news"></div>
+                </div>
+                <div tag='bongdaY' class="news-frame">
+                    <h2>BÓNG ĐÁ Ý</h2>
+                    <div class="first-post"></div>
+                    <div class="list-news"></div>
+                </div>
+                <div tag='bongdaVietNam' class="news-frame">
+                    <h2>BÓNG ĐÁ VIỆT NAM</h2>
+                    <div class="first-post"></div>
+                    <div class="list-news"></div>
+                </div>
+                <div tag='bongdaTheGioi' class="news-frame">
+                    <h2>BÓNG ĐÁ THẾ GIỚI</h2>
+                    <div class="first-post"></div>
+                    <div class="list-news"></div>
+                </div>
+            </div>
+            <div class="news-frame photo-video">
+                <div class="news-frame photo-news">
+                    <h2>PHOTO</h2>
+                    <div class='list-news'>
+
+                    </div>
+                </div>
+                <div class="news-frame video-news">
+                    <h2>VIDEO</h2>
+                    <div class="list-news">
+
+                    </div>
+                </div>
+            </div>
+            <div class="news-frame behind-the-pitch">
+                <h2>HẬU TRƯỜNG</h2>
                 <div class="list-news">
 
                 </div>
             </div>
-            <div class="news">
-
-            </div>
-            <div class="photo-video">
-                <div class="photo-news">
-
-                </div>
-                <div class="video-news">
-
-                </div>
-            </div>
-            <div class="behind-the-pitch">
-
-            </div>
         </div>
         <div class="footer">
-
-        </div>
+            <p>2017</p>
+            <div class="break-line" style="width: 30%"></div>
+            <p>By beohoang98</p>
+            <div class="break-line" style="width: 40%"></div>
+            <p>Design Ideas from
+                <a href="http://www.bongda.com.vn"
+                target="_blank"
+                rel='noreferrer noopener'>bongda.com.vn</a>
+            </p>
+        </>
         <script type="text/javascript" src="build.js"></script>
         <script type="text/javascript" src="effect.js"></script>
     </body>
