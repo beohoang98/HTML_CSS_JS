@@ -18,7 +18,7 @@ function createData() {
 
 function sortPost() {
     for (var i = 0; i < post.length; ++i) {
-        for (var j = i+1; j < post.length; ++j) {
+        for (var j = i + 1; j < post.length; ++j) {
             if (post[i].date.getTime() < post[j].date.getTime()) {
                 var tmp = post[i];
                 post[i] = post[j];

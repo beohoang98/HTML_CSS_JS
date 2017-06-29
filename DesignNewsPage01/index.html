@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="icon.png" type='image/png'>
-        <title>Tin tuc Bong Da, cac su kien bong da noi bat</title>
-        <link href="https://fonts.googleapis.com/css?family=Oswald|Pridi" rel="stylesheet">
-        <link type='text/css' rel="stylesheet" href="style.css">
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="post/data.js"></script>
-        <script type="text/javascript" src="post/createPostFormData.js"></script>
-    </head>
-    <body>
-        <div class="header">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png" type='image/png'>
+    <title>Tin tuc Bong Da, cac su kien bong da noi bat</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Pridi" rel="stylesheet">
+    <link type='text/css' rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="post/data.js"></script>
+    <script type="text/javascript" src="post/createPostFormData.js"></script>
+</head>
+
+<body>
+    <div class='header'>
+        <div class="row mar">
             <div class="logo">
                 <a href='index.html'>
                     <img src="logo.png" alt="logo">
@@ -72,93 +75,90 @@
                 </div>
             </div>
             <div class="search">
-                <img src="find.png" alt="find"/>
+                <img src="find.png" alt="find" />
                 <form action="index.html">
-                    <input type="search" placeholder="fill your keyword" id='search-text'/>
-                    <input type='submit' value='Tim kiem' id='search-button'/>
+                    <input type="search" placeholder="fill your keyword" id='search-text' />
+                    <input type='submit' value='Tim kiem' id='search-button' />
                 </form>
             </div>
         </div>
-        <div class="container">
-            <div class="break-line"></div>
-            <div class="news-frame trend-news">
-                <div id='first-trend' class="slide-news">
-                    <div class="slideshow-contain">
-                        <div class="slideshow">
-                        </div>
-                    </div>
-                    <div class="cursor">
-                        <div class="prev" onclick="changeSlide('#first-trend','-')">&#10094</div>
-                        <div class="next" onclick="changeSlide('#first-trend','+')">&#10095</div>
-                    </div>
+    </div>
+    <div class="container">
+        <div class="break-line"></div>
+        <div class="news-frame trend-news row">
+            <div class="news-frame hot-news col-4">
+                <h2>TIN NÓNG</h2>
+                <div class="list-news"></div>
+            </div>
+            <div id='first-trend' class="slide-news col-8">
+                <div class="slideshow-contain">
+                    <div class="slideshow"></div>
                 </div>
-                <div class="news-frame hot-news">
-                    <h2>TIN NÓNG</h2>
-                    <div class="list-news">
-
-                    </div>
+                <div class="cursor">
+                    <div class="prev" onclick="changeSlide('#first-trend','-')">&#10094</div>
+                    <div class="next" onclick="changeSlide('#first-trend','+')">&#10095</div>
                 </div>
             </div>
-            <div class="news">
-                <div tag='bongdaAnh' class="news-frame">
-                    <h2>BÓNG ĐÁ ANH</h2>
-                    <div class="first-post"></div>
-                    <div class="list-news"></div>
-                </div>
-                <div tag='bongdaTBN' class="news-frame">
-                    <h2>BÓNG ĐÁ TÂY BAN NHA</h2>
-                    <div class="first-post"></div>
-                    <div class="list-news"></div>
-                </div>
-                <div tag='bongdaY' class="news-frame">
-                    <h2>BÓNG ĐÁ Ý</h2>
-                    <div class="first-post"></div>
-                    <div class="list-news"></div>
-                </div>
-                <div tag='bongdaVietNam' class="news-frame">
-                    <h2>BÓNG ĐÁ VIỆT NAM</h2>
-                    <div class="first-post"></div>
-                    <div class="list-news"></div>
-                </div>
-                <div tag='bongdaTheGioi' class="news-frame">
-                    <h2>BÓNG ĐÁ THẾ GIỚI</h2>
-                    <div class="first-post"></div>
-                    <div class="list-news"></div>
+        </div>
+        <div class="news">
+            <div tag='bongdaAnh' class="news-frame">
+                <h2>BÓNG ĐÁ ANH</h2>
+                <div class="first-post"></div>
+                <div class="list-news"></div>
+            </div>
+            <div tag='bongdaTBN' class="news-frame">
+                <h2>BÓNG ĐÁ TÂY BAN NHA</h2>
+                <div class="first-post"></div>
+                <div class="list-news"></div>
+            </div>
+            <div tag='bongdaY' class="news-frame">
+                <h2>BÓNG ĐÁ Ý</h2>
+                <div class="first-post"></div>
+                <div class="list-news"></div>
+            </div>
+            <div tag='bongdaVietNam' class="news-frame">
+                <h2>BÓNG ĐÁ VIỆT NAM</h2>
+                <div class="first-post"></div>
+                <div class="list-news"></div>
+            </div>
+            <div tag='bongdaTheGioi' class="news-frame">
+                <h2>BÓNG ĐÁ THẾ GIỚI</h2>
+                <div class="first-post"></div>
+                <div class="list-news"></div>
+            </div>
+        </div>
+        <div class="news-frame photo-video row">
+            <div class="news-frame photo-news col-4">
+                <h2>PHOTO</h2>
+                <div class='list-news'>
+
                 </div>
             </div>
-            <div class="news-frame photo-video">
-                <div class="news-frame photo-news">
-                    <h2>PHOTO</h2>
-                    <div class='list-news'>
+            <div class="news-frame video-news col-4">
+                <h2>VIDEO</h2>
+                <div class="list-news">
 
-                    </div>
-                </div>
-                <div class="news-frame video-news">
-                    <h2>VIDEO</h2>
-                    <div class="list-news">
-
-                    </div>
                 </div>
             </div>
-            <div class="news-frame behind-the-pitch">
+            <div class="news-frame behind-the-pitch col-4">
                 <h2>HẬU TRƯỜNG</h2>
                 <div class="list-news">
 
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <p>2017</p>
-            <div class="break-line" style="width: 30%"></div>
-            <p>By beohoang98</p>
-            <div class="break-line" style="width: 40%"></div>
-            <p>Design Ideas from
-                <a href="http://www.bongda.com.vn"
-                target="_blank"
-                rel='noreferrer noopener'>bongda.com.vn</a>
-            </p>
+    </div>
+    <div class="footer">
+        <p>2017</p>
+        <div class="break-line" style="width: 30%"></div>
+        <p>By beohoang98</p>
+        <div class="break-line" style="width: 40%"></div>
+        <p>Design Ideas from
+            <a href="http://www.bongda.com.vn" target="_blank" rel='noreferrer noopener'>bongda.com.vn</a>
+        </p>
         </>
         <script type="text/javascript" src="build.js"></script>
         <script type="text/javascript" src="effect.js"></script>
-    </body>
+</body>
+
 </html>

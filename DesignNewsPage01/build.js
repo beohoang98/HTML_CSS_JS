@@ -2,41 +2,49 @@
 function makeSlide(index, postList) {
     var slide = $('<div/>').addClass('slide');
 
-    var image = $('<img/>').attr('src',postList[index].image)
-                           .appendTo(slide);
+    var image = $('<img/>').attr('src', postList[index].image)
+        .appendTo(slide);
 
     var title = $('<div/>').addClass('slide-title')
-                           .html(postList[index].title)
-                           .appendTo(slide);
+        .html(postList[index].title)
+        .appendTo(slide);
     return slide;
 }
+
 function createNews(index, postList) {
     var news = $('<div/>').addClass('news-post');
 
-    var image = $('<img/>').attr('src',postList[index].image)
-                           .appendTo(news);
-    var info = $('<div/>').html(postList[index].title)
-                          .appendTo(news);
+    var image = $('<img/>').attr('src', postList[index].image)
+        .appendTo(news);
+    var title = $('<div/>').html(postList[index].title)
+        .appendTo(news);
+    var info = $('<info/>').html(postList[index].info)
+        .appendTo(news);
     var date = $('<footer/>').html(postList[index].date.toDateString())
-                           .appendTo(news);
+        .appendTo(news);
     return news;
 }
-function createNewsNoImg(index) {
+
+function createNewsNoImg(index, postList) {
     var news = $('<div/>').addClass('news-post');
 
-    var info = $('<div/>').html(post[index].title)
-                          .appendTo(news);
-    var date = $('<footer/>').html(post[index].date.toDateString())
-                           .appendTo(news);
+    var title = $('<div/>').html(postList[index].title)
+        .appendTo(news);
+    var info = $('<info/>').html(postList[index].info)
+        .appendTo(news);
+    var date = $('<footer/>').html(postList[index].date.toDateString())
+        .appendTo(news);
     return news;
 }
+
 function checkTag(Tag, postData) {
     var arrayTag = postData.tag.split('#');
-    for (var i = 0; i < arrayTag.length;++i) {
+    for (var i = 0; i < arrayTag.length; ++i) {
         if (Tag === arrayTag[i]) return true;
     }
     return false;
 }
+
 function filterNews(Tag) {
     var filtedPost = [];
     for (var i = 0; i < post.length; ++i) {
@@ -51,8 +59,8 @@ $(document).ready(function() {
     var listNews = $('.hot-news .list-news');
 
     var tmpNews;
-    for (var i = 0; i < Math.min(5,post.length); ++i) {
-        if (i===0) tmpNews = createNews(i, post);
+    for (var i = 0; i < Math.min(5, post.length); ++i) {
+        if (i === 0) tmpNews = createNews(i, post);
         else tmpNews = createNewsNoImg(i, post);
         listNews.append(tmpNews.clone(true));
     }
@@ -62,10 +70,10 @@ $(document).ready(function() {
         $('#first-trend .slideshow').append(tmpNews.clone(true));
     }
 
-    $('#first-trend .slideshow').css('width',3*100+'%');
-    $('#first-trend .slide').css('width',100/3+'%');
-    $('#first-trend').attr('cur-slide',1)
-                     .attr('num-slide',3);
+    $('#first-trend .slideshow').css('width', 3 * 100 + '%');
+    $('#first-trend .slide').css('width', 100 / 3 + '%');
+    $('#first-trend').attr('cur-slide', 1)
+        .attr('num-slide', 3);
 
     //
     var photoPost = filterNews('photo');
@@ -87,10 +95,10 @@ $(document).ready(function() {
     }
     //
     var restNews = $('.news .news-frame');
-    var restPost=[];
+    var restPost = [];
     for (var i = 0; i < restNews.length; ++i) {
         var tagNews = restNews.eq(i).attr('tag');
-        restPost = filterNews(tagNews,post);
+        restPost = filterNews(tagNews, post);
 
         if (restPost.length === 0) break;
         //first post
@@ -102,4 +110,20 @@ $(document).ready(function() {
             $('.news .list-news').eq(i).append(tmpNews.clone(true));
         }
     }
+});
+
+//design responsive
+$(document).ready(function() {
+    $('.logo').addClass('col-2');
+    $('.menu').addClass('col-8');
+    $('.menu-member').addClass('col-2');
+    $('.header').on('click', function() {
+        if ($('body')[0].offsetWidth <= 800) {
+            $(this).find('.menu').toggle(100);
+        }
+    });
+    $('.news .news-frame').addClass('row');
+    $('.news .first-post').addClass('col-8');
+    $('.news .list-news').addClass('col-4');
+    $('.news-post').addClass('row');
 });
