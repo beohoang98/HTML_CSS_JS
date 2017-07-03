@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=vietnamese');
+body {
+    font-family: Open Sans, sans-serif;
+    font-size: 18px;
+    background: #ffd;
+    text-align: center;
+}
+.row div {
+    border-left: 1px solid #ffd;
+    border-top: 1px solid #ffd;
+    padding: 1em 0px;
+    color: #ffd;
+}
+#grid div div {
+    background-color: orange;
+}
+#typo div div {
+    background-color: green;
+}
+#typo .quote {
+    text-align: left;
+    background-color: lightgreen;
+    color: black;
+    font-family: cursive;
+}
+#table div {
+    color: black;
+    text-align: left;
+}
+#table h3 {
+    text-align: right;
+    background-color: blue;
+    color: white;
+    padding: 0.5em 1em 0.5em 0em;
+}
+#table i {
+    font-size: 2em;
+}
