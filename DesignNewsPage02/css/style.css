@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: #555;
+}
+h1, h2, h3 {
+    color: orange;
+    text-shadow: 0px 2px 2px black;
+    text-align: center;
+}
+.headline {
+    margin: 1em 0 0.5em 0;
+}
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.post {
+    position: relative;
+    color: #000;
+    text-align: left;
+    background-color: #ccc;
+    margin: 10px 5px;
+    box-shadow: 0px 5px 5px black;
+    border-radius: 15px;
+    overflow: hidden;
+
+    transition: 0.5s;
+}
+.post:hover {
+    background-color: rgb(238,142,80);
+}
+.post:hover .post-author {
+    opacity: 1;
+}
+.post-info {
+    padding: 1em;
+}
+.post-author {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 1em;
+
+    opacity: 0;
+    transition: 1s;
+}
+.post-title {
+    font-size: 1.5em;
+}
+.post-description {
+    color: #222;
+}
+
+
+//responsive
+.col-12 {width: 100%}
+.col-8 {width: 66.66%}
+.col-6 {width: 50%}
+.col-4 {width: 33.33%}
+.col-3 {width: 25%}
+[class*="col-"] {
+    float: left;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media (max-width: 1000px) and (min-width: 768px) {
+    .container {
+        width: 700px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 768px) and (min-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+    .container {
+        width: 500px;
+    }
+    #game-news .col-6 {
+        width: 100%;
+    }
+    #top-news > .colRight .post-description {
+        display: none;
+    }
+    h1 {
+        font-size: 1.25em;
+    }
+}
+@media (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+    .container {
+        width: 500px;
+    }
+    #top-post > .colLeft, #top-post > .colRight{
+        width: 100%;
+    }
+}

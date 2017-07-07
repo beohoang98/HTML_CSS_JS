@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>News</title>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+              integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+              crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/getPost.js"></script>
+    </head>
+    <body>
+        <div class="navbar"></div>
+        <div class="container">
+            <div id="top-post" class="row">
+                <div class="colLeft col-8">
+                    <div class="first-post"></div>
+                    <div id="game-news" class="row">
+                        <h1 class="headline">IGN NEWS</h1>
+                        <div class="colLeft col-6">
+                            <div class="list-post"></div>
+                        </div>
+                        <div class="colRight col-6">
+                            <div class="list-post"></div>
+                        </div>
+                    </div>
+                    <div id="google-news" class="row">
+                        <h1 class="headline">GOOGLE NEWS</h1>
+                        <div class="col-12">
+                            <div class="list-post"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="colRight col-4">
+                    <div id="ESPN-news">
+                        <h1 class="headline">ESPN NEWS</h1>
+                        <div class="list-post"></div>
+                    </div>
+                    <div id="the-new-york-times">
+                        <h1 class="headline">NEW YORK TIMES</h1>
+                        <div class="list-post"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <script src="js/buildPost.js"></script>
+        <script src="js/safe.js"></script>
+    </body>
+</html>
