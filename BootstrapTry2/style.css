@@ -36,3 +36,36 @@ body {
 #table i {
     font-size: 2em;
 }
+#jumbotron > div > div {
+    background-color: #555;
+}
+#jumbotron .jumbotron, #jumbotron .page-header {
+    background-color: #333;
+}
+
+#alert {
+    background-color: #55d;
+}
+#alert div {
+    color: inherit;
+    border: none;
+}
+:target {
+    display: block;
+}
+#alert-area {
+    position: fixed;
+    top:0;
+    right: 0;
+}
+.alert {
+    box-shadow: 0px 5px 5px rgba(0,0,0,.61);
+    width: 300px;
+}
+#alert .btn {
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    line-height: 100px;
+    font-size: 1.5em;
+}
