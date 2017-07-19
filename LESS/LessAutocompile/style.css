@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+* {
+  box-sizing: border-box;
+  transition: 0.4s;
+  margin: 0;
+}
+body {
+  font-family: 'Anton', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+#header {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+#header h1 {
+  padding: 1em;
+  background-color: #5037e6;
+  margin: 0;
+  color: rgba(40, 27, 115, 0.7);
+  text-shadow: 0px 2px 5px #5037e6, 0 0 0 #000000;
+  font-weight: bold;
+}
+.wrap {
+  display: table;
+  text-align: center;
+  padding: 1em;
+}
+.wrap > .inner {
+  display: inline-table;
+}
+.icon {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  transition: 0.1s;
+}
+.icon:active {
+  filter: brightness(50%);
+}
+.search {
+  background-image: url("data/search.png");
+}
+.download {
+  background-image: url("data/download.ico");
+}
+.document {
+  background-image: url("data/document.ico");
+}
+.wrap-popup {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.71);
+  text-align: center;
+}
+.wrap-popup-exit {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: monospace;
+  font-size: 1.5em;
+  padding: 1em;
+  background-color: #333;
+  color: white;
+}
+.wrap-popup-exit:hover {
+  background-color: #555;
+}
+.wrap-popup:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.popup {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.72);
+}
+.popup-title {
+  padding: 1em;
+  background-color: #5037e6;
+  color: rgba(40, 27, 115, 0.7);
+  text-shadow: 0px 2px 5px #5037e6, 0 0 0 #000000;
+}
+.popup-container {
+  padding: 1em;
+  background-color: #fff;
+  text-align: center;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding-left: 0;
+}
+.col-4 {
+  width: 33.33%;
+}
+@media (max-width: 768px) {
+  .col-4:nth-child(n) {
+    width: 50%;
+  }
+  .col-4:nth-child(3) {
+    width: 100%;
+  }
+}
+@media (max-width: 520px) {
+  .col-4:nth-child(n) {
+    width: 100%;
+  }
+}
+.col-8 {
+  width: 66.66%;
+}
+[class*="col-"] {
+  float: left;
+}
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+  background-color: rgba(80, 55, 230, 0.5);
+  border-radius: 1em;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: #281c73;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
