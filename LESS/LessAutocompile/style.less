@@ -1,26 +1,30 @@
-@import url('https://fonts.googleapis.com/css?family=Anton');
-
+@import url( 'https://fonts.googleapis.com/css?family=Anton');
 @mycolor: rgb(207,66,5);
 @mybgcolor: rgb(80,55,230);
+
 #insetTextShadow(@bg) {
     color: fadeout(@bg/2, 30%);
-    text-shadow: 0px 2px 5px @bg, 0 0 0 #000;
+    text-shadow: 0 2px 5px @bg, 0 0 0 #000;
 }
+
 #boxShadow() {
-    box-shadow: 0px 5px 10px rgba(0,0,0,.72);
+    box-shadow: 0 5px 10px rgba(0,0,0,.72);
 }
 @iconHeight: 200px;
 @iconWidth: 200px;
+
 * {
     box-sizing: border-box;
     transition: 0.4s;
     margin: 0;
 }
+
 body {
     font-family: 'Anton', sans-serif;
     font-size: 18px;
     margin: 0;
 }
+
 #header {
     float: left;
     width: 100%;
@@ -33,30 +37,37 @@ body {
         font-weight: bold;
     }
 }
+
 .wrap {
     display: table;
     text-align: center;
     padding: 1em;
-    >.inner {
+
+    > .inner {
         display: inline-table;
     }
 }
+
 .icon {
     display: inline-block;
     width: @iconWidth;
     height: @iconHeight;
     background-size: cover;
     transition: 0.1s;
+
     &:active {
         filter:brightness(50%);
     }
 }
+
 .search {
     background-image: url("data/search.png");
 }
+
 .download {
     background-image: url("data/download.ico");
 }
+
 .document {
     background-image: url("data/document.ico");
 }
@@ -68,20 +79,23 @@ body {
     height: 100vh;
     background-color: rgba(0,0,0,.71);
     text-align: center;
+
     &-exit {
         display: inline-block;
         position: absolute;
-        top:0;
+        top: 0;
         right: 0;
         font-family: monospace;
         font-size: 1.5em;
         padding: 1em;
         background-color: #333;
         color: white;
+
         &:hover {
             background-color: #555;
         }
     }
+
     &:before {
         content: "";
         display: inline-block;
@@ -95,26 +109,29 @@ body {
     vertical-align: middle;
     width: auto;
     #boxShadow;
+
     &-title {
         padding: 1em;
         background-color: @mybgcolor;
         #insetTextShadow(@mybgcolor);
     }
+
     &-container {
         padding: 1em;
         background-color: #fff;
         text-align: center;
     }
 }
+
 li {
     list-style: none;
 }
+
 ul {
     padding-left: 0;
 }
-
-
 // resposive
+
 .col {
     &-4 {
         width: 33.33%;
@@ -122,6 +139,7 @@ ul {
             &:nth-child(n) {
                 width: 50%;
             }
+
             &:nth-child(3) {
                 width: 100%;
             }
@@ -132,27 +150,33 @@ ul {
             }
         }
     }
-    &-8 {width: 66.66%}
+
+    &-8 {
+        width: 66.66%;
+    }
 }
+
 [class*="col-"] {
     float: left;
 }
+
 .row::after {
     content: "";
     display: block;
     clear: both;
 }
-
 //scrollbar
 ::-webkit-scrollbar {
     width: 0.5em;
     height: 0.5em;
     background-color: fadeout(@mybgcolor, 50%);
     border-radius: 1em;
+
     &-thumb {
         border-radius: 1em;
         background-color: @mybgcolor/2;
     }
+
     &-corner {
         display: none;
     }

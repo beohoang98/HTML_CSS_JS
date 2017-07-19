@@ -19,7 +19,7 @@ body {
   background-color: #5037e6;
   margin: 0;
   color: rgba(40, 27, 115, 0.7);
-  text-shadow: 0px 2px 5px #5037e6, 0 0 0 #000000;
+  text-shadow: 0 2px 5px #5037e6, 0 0 0 #000000;
   font-weight: bold;
 }
 .wrap {
@@ -81,13 +81,13 @@ body {
   display: inline-block;
   vertical-align: middle;
   width: auto;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.72);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.72);
 }
 .popup-title {
   padding: 1em;
   background-color: #5037e6;
   color: rgba(40, 27, 115, 0.7);
-  text-shadow: 0px 2px 5px #5037e6, 0 0 0 #000000;
+  text-shadow: 0 2px 5px #5037e6, 0 0 0 #000000;
 }
 .popup-container {
   padding: 1em;
