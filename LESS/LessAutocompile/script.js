@@ -14,20 +14,20 @@ function popup(things) {
 
             break;
     }
-    console.log('create'+things);
+    console.log('create' + things);
 }
 
 function createPopup() {
     var wrapOfPopup = $('<div/>').addClass('wrap-popup');
     var exitButton = $('<div/>').addClass('wrap-popup-exit')
-                                    .html('X')
-                                    .appendTo(wrapOfPopup);
+        .html('X')
+        .appendTo(wrapOfPopup);
     var thePopup = $('<div/>').addClass('popup')
-                                .appendTo(wrapOfPopup);
+        .appendTo(wrapOfPopup);
     var title = $('<h1/>').addClass('popup-title')
-                            .appendTo(thePopup);
+        .appendTo(thePopup);
     var containOfPopup = $('<div/>').addClass('popup-container')
-                                    .appendTo(thePopup);
+        .appendTo(thePopup);
 
     exitButton.on('click', function() {
         $(this).parent().fadeOut(500, function() {
@@ -45,27 +45,28 @@ function createPopupDownload() {
 
     var listOfLink = $('<ul/>').appendTo(contain);
     $('<li/>').html("Windows 64bit: <a href='#'>&#10149</a>")
-                .appendTo(listOfLink);
+        .appendTo(listOfLink);
     $('<li/>').html("Windows 32bit: <a href='#'>&#10149</a>")
-                .appendTo(listOfLink);
+        .appendTo(listOfLink);
     $('<li/>').html("Linux: <a href='#'>&#10149</a>")
-                .appendTo(listOfLink);
+        .appendTo(listOfLink);
     return thePopup;
 }
+
 function createPopupSearch() {
     var thePopup = createPopup();
     thePopup.find('.popup-title').html("SEARCH");
     var contain = thePopup.find('.popup-container');
 
-    $('<textarea/>').attr('placeholder','Keyword')
-                    .attr('rows','1')
-                    .attr('cols','50')
-                    .appendTo(contain);
-    $('<button/>').attr('type','button')
-                    .html('FIND')
-                    .css('display','block')
-                    .css('margin','auto')
-                    .css('padding','1em 2em')
-                    .appendTo(contain);
+    $('<textarea/>').attr('placeholder', 'Keyword')
+        .attr('rows', '1')
+        .attr('cols', '50')
+        .appendTo(contain);
+    $('<button/>').attr('type', 'button')
+        .html('FIND')
+        .css('display', 'block')
+        .css('margin', 'auto')
+        .css('padding', '1em 2em')
+        .appendTo(contain);
     return thePopup;
 }
