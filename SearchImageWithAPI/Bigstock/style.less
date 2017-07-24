@@ -1,4 +1,9 @@
 @lowColor : rgb(33,33,33);
+#linearBG(@bg) {
+    background-image: -webkit-linear-gradient(left, fadeout(@bg, 90%), fadeout(@bg, 10%), fadeout(@bg, 90%));
+    background-image: -o-linear-gradient(left, fadeout(@bg, 90%), fadeout(@bg, 10%), fadeout(@bg, 90%));
+    background-image: linear-gradient(to right, fadeout(@bg, 90%), fadeout(@bg, 10%), fadeout(@bg, 90%));
+}
 
 body {
     text-align: center;
@@ -6,16 +11,22 @@ body {
 }
 #search-value {
     text-align: left;
+    width: 100%;
 }
 #navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+
     padding: 1em;
+    margin: 0;
+
     background: @lowColor;
-    div:first-child {
-        text-align: right;
-    }
-    div:last-child {
-        text-align: left;
-    }
+}
+#content {
+    margin-top: 4em;
+    z-index: 1;
 }
 #ShowFirst {
     height: 400px;
@@ -29,6 +40,18 @@ body {
         display: inline-block;
         vertical-align: middle;
         width: 60%;
+    }
+}
+#loading-area {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    #linearBG(#000);
+    img {
+        width: 100px;
+        margin: 0 auto;
     }
 }
 .image {
