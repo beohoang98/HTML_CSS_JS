@@ -35,7 +35,7 @@ function UpdateImage(searchkey) {
     };
     isLoaded = false;
     $("#loading-area").fadeIn(400);
-    $.getJSON("http://api.bigstockphoto.com/2/"+account_key+"/search/?callback=?",param, function(data) {
+    $.getJSON("https://api.bigstockphoto.com/2/"+account_key+"/search/?callback=?",param, function(data) {
         if (data && data.data && data.data.images) {
             $.each(data.data.images, function(index, item) {
                 var colName = "#col"+(index%3);
